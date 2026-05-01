@@ -69,7 +69,10 @@ export default function NarrativeLayer({ scrollYProgress }: { scrollYProgress: M
             alt="Logo"
             width={40}
             height={40}
-            className="w-8 h-8 md:w-10 md:h-10 object-contain"
+            // Tambahkan filter invert agar logo beradaptasi dengan tema
+            // Jika logo asli warna HITAM -> pakai "dark:invert"
+            // Jika logo asli warna PUTIH -> pakai "invert dark:invert-0"
+            className="w-8 h-8 md:w-10 md:h-10 object-contain invert dark:invert-0"
           />
           <span className="text-2xl md:text-3xl font-bold tracking-widest text-foreground">
             {siteConfig.personal.shortName}

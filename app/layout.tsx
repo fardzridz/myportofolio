@@ -73,7 +73,7 @@ export default function RootLayout({
       <body className={cn(outfit.variable, "font-sans bg-background text-foreground overflow-x-hidden")}>
         <ThemeProvider
             attribute="class"
-            defaultTheme="system"
+            defaultTheme="dark"
             enableSystem
             disableTransitionOnChange
         >
