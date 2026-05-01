@@ -80,7 +80,7 @@ export default function NarrativeLayer({ scrollYProgress }: { scrollYProgress: M
         </div>
 
         {/* Tagline Utama (Portonah Sengkok) */}
-        <h1 className="text-6xl md:text-9xl font-bold tracking-tighter mb-4 text-foreground">
+        <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter mb-4 md:mb-6 text-foreground max-w-screen-xl mx-auto px-4">
           {Array.isArray(siteConfig.personal.tagline) 
             ? siteConfig.personal.tagline.map((line, i) => (
                 <React.Fragment key={i}>
@@ -110,13 +110,13 @@ export default function NarrativeLayer({ scrollYProgress }: { scrollYProgress: M
         style={{ y: statementY }}
         className="absolute inset-0 flex items-center justify-center p-6 pointer-events-auto"
       >
-        <div className="max-w-4xl space-y-6 relative z-10 text-center">
-          <h2 className="text-4xl md:text-6xl font-bold leading-tight text-foreground">
+        <div className="max-w-5xl space-y-8 md:space-y-12 relative z-10 text-center px-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
             <ScrollRevealText progress={scrollYProgress} range={[0.35, 0.42]}>
               {siteConfig.about.greeting}
             </ScrollRevealText>
           </h2>
-          <div className="text-lg md:text-5xl font-light leading-tight text-foreground/80">
+          <div className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-light leading-snug md:leading-tight text-foreground/80">
             <p>
               <ScrollRevealText progress={scrollYProgress} range={[0.42, 0.5]}>
                 {siteConfig.about.description}
@@ -135,14 +135,16 @@ export default function NarrativeLayer({ scrollYProgress }: { scrollYProgress: M
         style={{ y: skillsY }}
         className="absolute inset-0 flex items-center justify-center p-6"
       >
-        <div className="max-w-3xl">
-           <h3 className="text-3xl md:text-6xl font-medium text-foreground mb-6">
+        <div className="max-w-4xl text-center px-4">
+           <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-foreground mb-8 md:mb-12">
              {siteConfig.about.statement.line1} <br/>
              <span className="text-accent">{siteConfig.about.statement.line2}</span>
            </h3>
-           <div className="flex flex-wrap gap-4 justify-center text-foreground/60">
+           <div className="flex flex-wrap gap-3 md:gap-4 justify-center text-foreground/60">
              {siteConfig.skills.map((skill) => (
-               <span key={skill} className="border border-foreground/20 px-4 py-2 rounded-full text-sm uppercase tracking-widest">{skill}</span>
+               <span key={skill} className="border border-foreground/20 px-4 py-2 md:px-6 md:py-3 rounded-full text-xs md:text-sm uppercase tracking-widest transition-colors hover:bg-foreground/5 hover:text-foreground">
+                 {skill}
+               </span>
              ))}
            </div>
         </div>
@@ -154,7 +156,7 @@ export default function NarrativeLayer({ scrollYProgress }: { scrollYProgress: M
       >
          <Watermark text="KARYA AKU" />
 
-        <div className="w-full h-auto flex items-center justify-center relative z-10">
+        <div className="w-full max-w-7xl h-auto flex items-center justify-center relative z-10 px-0 sm:px-4">
              <ProjectsSection />
         </div>
       </motion.section>
@@ -163,7 +165,7 @@ export default function NarrativeLayer({ scrollYProgress }: { scrollYProgress: M
         style={{ y: ctaY, scale: ctaScale }}
         className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center pointer-events-auto"
       >
-        <h2 className="text-5xl md:text-8xl font-bold text-foreground mb-8 tracking-tighter">
+        <h2 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-foreground mb-8 md:mb-12 tracking-tighter">
           {siteConfig.cta.title}
         </h2>
         <AnimatedButton
@@ -174,7 +176,7 @@ export default function NarrativeLayer({ scrollYProgress }: { scrollYProgress: M
           textClassName="text-xl font-bold"
         />
         
-        <div className="mt-16 flex gap-8 text-foreground/50">
+        <div className="mt-12 md:mt-16 flex gap-6 md:gap-8 text-foreground/50">
            <a href={siteConfig.social.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
              <Github className="hover:text-foreground transition-colors cursor-pointer" />
            </a>

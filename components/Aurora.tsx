@@ -93,7 +93,11 @@ void main() {
   vec3 rampColor;
   COLOR_RAMP(colors, uv.x, rampColor);
   
-  float height = snoise(vec2(uv.x * 2.0 + uTime * 0.1, uTime * 0.25)) * 0.5 * uAmplitude;
+  // Agar aurora tidak terlihat sempit (kesempitan) di layar HP
+  float aspect = uResolution.x / uResolution.y;
+  float waveFrequency = aspect < 1.0 ? 0.8 : 2.0;
+  
+  float height = snoise(vec2(uv.x * waveFrequency + uTime * 0.1, uTime * 0.25)) * 0.5 * uAmplitude;
   height = exp(height);
   height = (uv.y * 2.0 - height + 0.2);
   float intensity = 0.6 * height;
