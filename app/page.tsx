@@ -7,12 +7,10 @@ export default function Home() {
     <>
       <Preloader />
       <Navbar />
-      <main className="relative">
+      <div className="relative">
         <ScrollStage />
-      </main>
-      <footer className="fixed bottom-2 w-full text-center text-xs text-white/20 pointer-events-none mix-blend-difference z-50">
-        SCROLL TO EXPLORE
-      </footer>
+      </div>
+
     </>
   );
 }

@@ -60,7 +60,7 @@ export default function Preloader() {
 
              {/* Percentage */}
              <div className="relative">
-                <motion.div className="text-8xl md:text-6xl font-light tracking-tighter tabular-nums leading-none">
+                <motion.div className="text-6xl md:text-8xl font-light tracking-tighter tabular-nums leading-none">
                   <motion.span>{rounded}</motion.span>%
                 </motion.div>
                 

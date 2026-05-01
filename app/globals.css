@@ -7,32 +7,32 @@
 }
 
 :root {
-  --background: #FAFAFA;
+  --background: #F5F5F5;
   --foreground: #121212;
   --accent: #2563EB;
   --text-primary: #000000;
   --text-secondary: rgba(0, 0, 0, 0.7);
   --text-muted: rgba(0, 0, 0, 0.5);
   --canvas-color: #121212;
-  --canvas-fog: #FAFAFA;
-  --gradient-start: #FAFAFA;
+  --canvas-fog: #F5F5F5;
+  --gradient-start: #F5F5F5;
   --gradient-mid: #F5F5F5;
-  --gradient-end: #FFFFFF;
+  --gradient-end: #F5F5F5;
   --border-color: rgba(0, 0, 0, 0.1);
 }
 
 .dark {
-  --background: #09090b;
+  --background: #1E1E1E;
   --foreground: #FAFAFA;
   --accent: #60A5FA;
   --text-primary: #FFFFFF;
   --text-secondary: rgba(255, 255, 255, 0.7);
   --text-muted: rgba(255, 255, 255, 0.5);
-  --canvas-color: #FAFAFA;
-  --canvas-fog: #09090b;
-  --gradient-start: #09090b;
-  --gradient-mid: #18181b;
-  --gradient-end: #27272a;
+  --canvas-color: #F5F5F5;
+  --canvas-fog: #1E1E1E;
+  --gradient-start: #1E1E1E;
+  --gradient-mid: #1E1E1E;
+  --gradient-end: #1E1E1E;
   --border-color: rgba(255, 255, 255, 0.1);
 }
 

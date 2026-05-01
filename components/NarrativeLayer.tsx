@@ -80,7 +80,7 @@ export default function NarrativeLayer({ scrollYProgress }: { scrollYProgress: M
         </div>
 
         {/* Tagline Utama (Portonah Sengkok) */}
-        <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter mb-4 md:mb-6 text-foreground max-w-screen-xl mx-auto px-4">
+        <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter mb-4 md:mb-6 text-foreground max-w-screen-xl mx-auto px-4">
           {Array.isArray(siteConfig.personal.tagline) 
             ? siteConfig.personal.tagline.map((line, i) => (
                 <React.Fragment key={i}>
@@ -101,7 +101,7 @@ export default function NarrativeLayer({ scrollYProgress }: { scrollYProgress: M
 
       <motion.section
         style={{ y: velocityY }}
-        className="absolute inset-0 flex items-center justify-center z-20 mix-blend-difference" 
+        className="absolute inset-0 flex items-center justify-center z-20 text-foreground" 
       >
          <ScrollVelocityText />
       </motion.section>
@@ -133,7 +133,7 @@ export default function NarrativeLayer({ scrollYProgress }: { scrollYProgress: M
 
       <motion.section 
         style={{ y: skillsY }}
-        className="absolute inset-0 flex items-center justify-center p-6"
+        className="absolute inset-0 flex items-center justify-center p-6 pointer-events-auto"
       >
         <div className="max-w-4xl text-center px-4">
            <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-foreground mb-8 md:mb-12">
@@ -165,7 +165,7 @@ export default function NarrativeLayer({ scrollYProgress }: { scrollYProgress: M
         style={{ y: ctaY, scale: ctaScale }}
         className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center pointer-events-auto"
       >
-        <h2 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-foreground mb-8 md:mb-12 tracking-tighter">
+        <h2 className="text-3xl sm:text-4xl md:text-7xl lg:text-8xl font-bold text-foreground mb-8 md:mb-12 tracking-tighter">
           {siteConfig.cta.title}
         </h2>
         <AnimatedButton

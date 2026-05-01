@@ -32,21 +32,22 @@ interface RevealTextProps {
 }
 
 export function ScrollRevealText({ children, className, progress, range = [0, 1] }: RevealTextProps) {
-  const characters = children.split("");
-  const amount = characters.length;
+  const words = children.split(" ");
+  const amount = words.length;
   const step = (range[1] - range[0]) / amount;
 
   return (
-    <span className={cn("inline-block wrap-break-word", className)}>
-      {characters.map((char, i) => {
+    <span className={cn("inline", className)}>
+      {words.map((word, i) => {
         const start = range[0] + i * step;
         const end = start + step;
         return (
-          <Char 
-            key={i} 
-            char={char} 
-            progress={progress} 
-            range={[start, end]} 
+          <Word
+            key={i}
+            word={word}
+            progress={progress}
+            range={[start, end]}
+            isLast={i === words.length - 1}
           />
         );
       })}
@@ -54,11 +55,18 @@ export function ScrollRevealText({ children, className, progress, range = [0, 1]
   );
 }
 
-const Char = ({ char, progress, range }: { char: string, progress: MotionValue<number>, range: [number, number] }) => {
+interface WordProps {
+  word: string;
+  progress: MotionValue<number>;
+  range: [number, number];
+  isLast: boolean;
+}
+
+const Word = ({ word, progress, range, isLast }: WordProps) => {
   const opacity = useTransform(progress, range, [0.1, 1]);
   return (
-    <motion.span style={{ opacity }} className="inline-block transition-colors duration-0">
-      {char === " " ? "\u00A0" : char}
+    <motion.span style={{ opacity }} className="inline-block">
+      {word}{!isLast && "\u00A0"}
     </motion.span>
   );
-}
+};

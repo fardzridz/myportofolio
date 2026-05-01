@@ -161,7 +161,7 @@ export default function ProjectRow({
         {/* Preview Card */}
         <div 
             ref={previewCardRef}
-            className="absolute right-4 md:right-12 bottom-4 w-48 md:w-80 aspect-video z-30 drop-shadow-2xl pointer-events-auto"
+            className="absolute right-4 md:right-12 bottom-4 w-48 md:w-80 aspect-video z-30 drop-shadow-2xl pointer-events-auto hidden md:block"
         >
             <div className="relative w-full h-full rounded-xl overflow-hidden border-4 border-white shadow-lg bg-white">
                 <Image 
