@@ -5,6 +5,7 @@ import SmoothScroll from "@/components/SmoothScroll";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
 import FloatingDock from "@/components/FloatingDock";
+import CustomCursor from "@/components/CustomCursor";
 
 import { siteConfig } from "@/lib/config";
 
@@ -82,6 +83,7 @@ export default function RootLayout({
               <main className="relative z-10">{children}</main>
             </SmoothScroll>
             <FloatingDock />
+            <CustomCursor />
         </ThemeProvider>
       </body>
     </html>

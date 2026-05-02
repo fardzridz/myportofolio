@@ -6,6 +6,7 @@ export const siteConfig = {
     tagline: ["PORTONAH", "SENGKOK"], // Multi-line tagline
     university: "Universitas PGRI Wiranegara",
     year: "2023",
+    heroImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400",
   },
 
   social: {
@@ -99,9 +100,9 @@ export const siteConfig = {
       title: "Bromoboom",
       subtitle: "Tourism Catalogue",
       bgImage:
-        "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1200",
+        "https://i.ibb.co.com/4nJ6cp06/Cuplikan-layar-2026-04-30-224400.png",
       previewImage:
-        "https://images.unsplash.com/photo-1589441160799-cf02bd6441ef?auto=format&fit=crop&q=80&w=800",
+        "https://i.ibb.co.com/4nJ6cp06/Cuplikan-layar-2026-04-30-224400.png",
       description:
         "Website katalog layanan pariwisata Tour Bromo yang modern dan cepat untuk menampilkan profil destinasi serta informasi paket wisata secara komprehensif.",
       tech: ["TypeScript", "Next.js", "PostgreSQL", "Supabase"],
@@ -112,9 +113,9 @@ export const siteConfig = {
       title: "Nongki (UI/UX)",
       subtitle: "Mobile App Design",
       bgImage:
-        "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200",
+        "https://i.ibb.co.com/4nJ6cp06/Cuplikan-layar-2026-04-30-224400.png",
       previewImage:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+        "https://i.ibb.co.com/4nJ6cp06/Cuplikan-layar-2026-04-30-224400.png",
       description:
         "Rancangan antarmuka aplikasi pencarian tempat nongkrong terdekat. Berfokus pada kemudahan navigasi, tata letak modern, dan pengalaman pengguna yang intuitif.",
       tech: ["Figma", "UI/UX Design", "Prototyping"],
@@ -125,9 +126,9 @@ export const siteConfig = {
       title: "Kasirku",
       subtitle: "Point of Sales System",
       bgImage:
-        "https://images.unsplash.com/photo-1556742044-3c52d6e88c62?auto=format&fit=crop&q=80&w=1200",
+        "https://i.ibb.co.com/4nJ6cp06/Cuplikan-layar-2026-04-30-224400.png",
       previewImage:
-        "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&q=80&w=800",
+        "https://i.ibb.co.com/4nJ6cp06/Cuplikan-layar-2026-04-30-224400.png",
       description:
         "Sistem kasir berbasis web untuk mempermudah manajemen transaksi, pencatatan stok barang, dan efisiensi rekapitulasi data penjualan harian.",
       tech: ["PHP Native", "MySQL", "Bootstrap"],

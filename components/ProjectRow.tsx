@@ -115,7 +115,8 @@ export default function ProjectRow({
     <Link 
         ref={containerRef}
         href={href} 
-        className="relative block w-full group border-b border-foreground/10 py-6 cursor-pointer outline-none" 
+        className="relative block w-full group border-b border-foreground/10 py-6 cursor-pointer outline-none"
+        data-cursor-image={previewImage}
         onFocus={handleMouseEnter} 
         onBlur={handleMouseLeave}
         onMouseEnter={handleMouseEnter}

@@ -10,6 +10,7 @@ import { ArrowRight, Github, Twitter, Linkedin } from "lucide-react";
 import { siteConfig } from "@/lib/config";
 import AnimatedButton from "./AnimatedButton";
 import Aurora from "./Aurora";
+import HeroTextCircle from "./HeroTextCircle";
 
 const Watermark = ({ text }: { text: string }) => {
   const charCount = text.length;
@@ -34,7 +35,6 @@ const Watermark = ({ text }: { text: string }) => {
 export default function NarrativeLayer({ scrollYProgress }: { scrollYProgress: MotionValue<number> }) {
 
   const heroY = useTransform(scrollYProgress, [0, 0.3], ["0vh", "-100vh"]);
-  const heroScale = useTransform(scrollYProgress, [0, 0.3], [1, 0.9]);
   
   const velocityY = useTransform(scrollYProgress, [0, 0.2, 0.4], ["100vh", "0vh", "-100vh"]);
 
@@ -50,7 +50,7 @@ export default function NarrativeLayer({ scrollYProgress }: { scrollYProgress: M
   return (
     <div className="absolute inset-0 z-10 pointer-events-none">
       <motion.section 
-        style={{ y: heroY, scale: heroScale }}
+        style={{ y: heroY }}
         className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center"
       >
         {/* Aurora Background (Hanya di Hero, Ikut Scroll) */}
@@ -61,6 +61,8 @@ export default function NarrativeLayer({ scrollYProgress }: { scrollYProgress: M
              blend={0.5} 
            />
         </div>
+
+        <HeroTextCircle />
 
         {/* Logo & Nama Singkat Kecil di Atas Tagline */}
         <div className="flex items-center justify-center gap-3 mb-8 opacity-80">
@@ -80,7 +82,7 @@ export default function NarrativeLayer({ scrollYProgress }: { scrollYProgress: M
         </div>
 
         {/* Tagline Utama (Portonah Sengkok) */}
-        <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter mb-4 md:mb-6 text-foreground max-w-screen-xl mx-auto px-4">
+        <h1 data-hero-text className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter mb-4 md:mb-6 text-foreground max-w-screen-xl mx-auto px-4">
           {Array.isArray(siteConfig.personal.tagline) 
             ? siteConfig.personal.tagline.map((line, i) => (
                 <React.Fragment key={i}>
