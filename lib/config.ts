@@ -6,7 +6,7 @@ export const siteConfig = {
     tagline: ["PORTONAH", "SENGKOK"], // Multi-line tagline
     university: "Universitas PGRI Wiranegara",
     year: "2023",
-    heroImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400",
+    heroImage: "https://i.ibb.co.com/zhSvx0x2/1778171672098.jpg",
   },
 
   social: {

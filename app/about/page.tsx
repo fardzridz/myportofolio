@@ -9,7 +9,6 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen bg-background px-4 pt-20 pb-12 text-foreground transition-colors duration-300">
       <div className="mx-auto max-w-4xl">
-        {/* Back Button */}
         <Link 
           href="/"
           className="inline-flex items-center gap-2 text-zinc-600 dark:text-zinc-400 hover:text-foreground transition-colors mb-8 group"
@@ -18,10 +17,8 @@ export default function AboutPage() {
           Back to Home
         </Link>
 
-        {/* Bento Grid */}
         <div className="grid grid-flow-dense grid-cols-12 gap-4">
           
-          {/* Hero Card - Large with subtle animation */}
           <div className="rounded-2xl border border-white dark:border-zinc-800 shadow-sm dark:shadow-none bg-white/50 dark:bg-zinc-900/10 backdrop-blur-md p-8 col-span-12 row-span-2 md:col-span-6 hover:border-white dark:hover:border-zinc-700 transition-all duration-300">
             <div className="flex items-center justify-start mb-6">
               <div className="relative group/avatar">
